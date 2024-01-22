@@ -1,10 +1,10 @@
-def singleNumber(nums: list[int]) -> int:
-        
-        res = nums[0]
-        for i in range(1,len(nums)):
-            res = res ^ nums[i]
-            print(res)
-        
-        return res
+import math
+AB=int(input())
+BC=int(input())
+AC= math.sqrt(pow(AB, 2) + pow(BC, 2))
+MC=AC//2
+x=math.asin(BC/AC)
+x=math.degrees(x)
+res=90-x
 
-print(singleNumber([4,1,2,1,2]))
+print(round(res))
