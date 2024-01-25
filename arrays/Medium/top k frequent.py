@@ -59,5 +59,22 @@ def topKFrequent(nums: list[int], k: int) -> list[int]:
 #                     return res
 
 
+
+#heap solution 25 jan
+import heapq
+def topKFrequent(nums: list[int], k: int) -> list[int]:
+        res={}
+        for i in range(len(nums)):
+            res[nums[i]]=1+res.get(nums[i],0)
+        pairs=[]
+        for n,c in res.items():
+            pairs.append([-c,n])
+        ans=[]
+        heapq.heapify(pairs)
+        for _ in range(k):
+            l=heapq.heappop(pairs)
+            ans.append(l[1])
+        return ans
+
 print(topKFrequent([1,1,1,2,2,3],2))
 
