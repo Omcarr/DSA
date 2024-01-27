@@ -4,6 +4,7 @@ def findDuplicate(nums: list[int]) -> int:
         for i in range(len(nums)):
             t=nums[i]
             sums^=t
+        print(isinstance(n,int))
         return sums-n
 
 
