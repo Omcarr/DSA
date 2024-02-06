@@ -19,8 +19,9 @@ class Solution():
          
         if l1:
          tail.next= l1
-        else:
+        elif l2:
          tail.next=l2
+         
         return dummynode.next
     
 linkl=Solution()

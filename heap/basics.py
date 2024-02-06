@@ -22,5 +22,3 @@
 #getting heap min/max o(1)
 
 #can convert an array into a heap using .heapify() o(N)
-
-     
